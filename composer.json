@@ -1,5 +1,5 @@
 {
-  "name": "timneutkens/wp-cli-dbsync",
+  "name": "icecubenz-wp/wp-cli-dbsync",
   "license": "MIT",
   "description": "Import database from remote host",
   "keywords": [
@@ -12,9 +12,7 @@
     }
   ],
   "require": {
-    "php": ">=5.4",
-    "wp-cli/wp-cli": "~1.5.1",
-    "x-team/wp-cli-ssh": "dev-master"
+    "wp-cli/wp-cli": ">=1.5.1"
   },
   "autoload": {
     "files": [
