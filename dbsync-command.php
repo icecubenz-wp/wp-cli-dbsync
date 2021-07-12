@@ -62,12 +62,12 @@ class DBSYNC_Command extends WP_CLI_Command {
 		WP_CLI::log( 'Database has been reset. Doing import now.' );
 
 		// Export external database to STDOUT and pipe it to local STDIN
-		WP_CLI::log( exec( 'wp ' . $host . ' db export - | wp db import -' ) );
+		WP_CLI::log( exec( 'wp --ssh=' . $host . ' db export - | wp db import -' ) );
 
 		WP_CLI::log( 'Done importing. Doing search replace now.' );
 
 		// Decode JSON string we got from option
-		$remote_base_url = json_decode( exec( 'wp ' . $host . ' option get home --format=json') );
+		$remote_base_url = json_decode( exec( 'wp --ssh=' . $host . ' option get home --format=json') );
 
 		// Skip guid because it should never be changed.
 		WP_CLI::log( exec( "wp search-replace '" . $remote_base_url . "' '" . $new_base_url . "' --skip-columns=guid" ) );
