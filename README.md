@@ -4,7 +4,7 @@
 This is a wp-cli command version of [this gist](https://gist.github.com/timneutkens/32c9bcd7d8576e663958ed4b1389c1dc)
 
 ## Installation
-`composer require icecubenz-wp/wp-cli-dbsync:^1.0.0`
+`composer require icecubenz-wp/wp-cli-dbsync:^1.5.0`
 
 ## Configuration
 To get started use their instructions to setup a remote host:
